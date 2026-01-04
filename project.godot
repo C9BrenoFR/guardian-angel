@@ -15,6 +15,10 @@ run/main_scene="uid://2q2e6ckkhdmi"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PlayerStats="*res://scripts/player_stats.gd"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
