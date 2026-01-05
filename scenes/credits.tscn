@@ -27,9 +27,9 @@ offset_bottom = 555.0
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 95.0
-offset_top = 102.0
+offset_top = 99.0
 offset_right = 1051.0
-offset_bottom = 477.0
+offset_bottom = 494.0
 theme_override_fonts/font = ExtResource("3_8gwij")
 theme_override_font_sizes/font_size = 24
 text = "[Descrição do Jogo]

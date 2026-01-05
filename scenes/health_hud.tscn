@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dht5qkpji8sly"]
+
+[ext_resource type="Texture2D" uid="uid://17plm4223a0c" path="res://assets/sprites/ui/syringe-vertical-empty-3.png" id="2_653qa"]
+[ext_resource type="Texture2D" uid="uid://cylftbrrwc2x7" path="res://assets/sprites/ui/syringe-vertical-full-3.png" id="3_1oh7d"]
+
+[node name="HealthHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 20.0
+offset_right = 125.0
+offset_bottom = 276.0
+fill_mode = 3
+texture_under = ExtResource("2_653qa")
+texture_progress = ExtResource("3_1oh7d")

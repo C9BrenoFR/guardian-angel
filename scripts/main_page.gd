@@ -2,7 +2,11 @@ extends Control
 
 func _on_play_pressed() -> void:
 	print("Play Pressed")
-	# get_tree().change_scene_to_file("res://cenas/game.tscn")
+	var target := "res://scenes/level01.tscn"
+	if get_tree().has_method("change_scene_to_file"):
+		get_tree().change_scene_to_file(target)
+	else:
+		get_tree().change_scene(target)
 
 
 func _on_credit_pressed() -> void:
