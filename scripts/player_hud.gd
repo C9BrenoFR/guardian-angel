@@ -15,7 +15,7 @@ func _initialize_health_bar():
 	"""Inicializa a barra de vida com valor 0"""
 	if health_bar:
 		health_bar.max_value = 100
-		health_bar.value = 0
+		health_bar.value = 100
 		health_bar.fill_mode = TextureProgressBar.FILL_BOTTOM_TO_TOP  # Preenche de baixo para cima
 
 func _on_health_changed(current_health: int, max_health: int):

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c5yvk8v7yq8n1"]
 
-[ext_resource type="Script" uid="uid://bqo75fdnteows" path="res://scripts/health_hud.gd" id="1_health_hud"]
+[ext_resource type="Script" uid="uid://bqo75fdnteows" path="res://scripts/player_hud.gd" id="1_health_hud"]
 [ext_resource type="Texture2D" uid="uid://17plm4223a0c" path="res://assets/sprites/ui/syringe-vertical-empty-3.png" id="2_653qa"]
 [ext_resource type="Texture2D" uid="uid://cylftbrrwc2x7" path="res://assets/sprites/ui/syringe-vertical-full-3.png" id="3_1oh7d"]
 
@@ -11,10 +11,8 @@ script = ExtResource("1_health_hud")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 layout_mode = 0
-offset_left = 61.0
-offset_top = 20.0
-offset_right = 125.0
-offset_bottom = 276.0
+offset_right = 64.0
+offset_bottom = 256.0
 fill_mode = 3
 texture_under = ExtResource("2_653qa")
 texture_progress = ExtResource("3_1oh7d")
