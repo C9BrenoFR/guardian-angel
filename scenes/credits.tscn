@@ -29,13 +29,13 @@ layout_mode = 0
 offset_left = 95.0
 offset_top = 99.0
 offset_right = 1051.0
-offset_bottom = 494.0
+offset_bottom = 640.0
 theme_override_fonts/font = ExtResource("3_8gwij")
 theme_override_font_sizes/font_size = 24
 text = "[Descrição do Jogo]
 
 Fontes e recursos
-- Health Bar (ícones/asset): https://skristi.itch.io/heart-and-health-bars
+- Health Bar: https://skristi.itch.io/heart-and-health-bars
 
 Grupo
 - Breno Furtado Rosado — 202376003
