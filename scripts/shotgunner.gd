@@ -7,6 +7,7 @@ const BULLET_SCENE = preload("res://scenes/bullet.tscn")
 @export var bullet_speed := 300.0
 @export var shots := 10
 @export var shoot_cooldown := 1.2
+@onready var shotgun = $"enemy-shotgun" as AudioStreamPlayer
 
 var player: CharacterBody2D
 var shoot_timer := 0.0
@@ -39,6 +40,7 @@ func chase_player():
 	velocity = dir * move_speed
 
 func shoot_cone():
+	shotgun.play()
 	var base_dir = (player.global_position - global_position).normalized()
 	
 	var cone_angle = deg_to_rad(30)

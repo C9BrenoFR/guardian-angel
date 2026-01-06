@@ -5,7 +5,6 @@ const ENEMYS = [
 	preload("res://scenes/gunner.tscn")
 ]
 
-
 const WAVES = [10, 12, 14, 18, 20]
 const TIME_BETWEEN_SPAWNS := 0.3
 

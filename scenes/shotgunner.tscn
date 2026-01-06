@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://d1vr0md4uh0xf"]
+[gd_scene load_steps=24 format=3 uid="uid://d1vr0md4uh0xf"]
 
 [ext_resource type="Texture2D" uid="uid://bgjymqf5mv5aa" path="res://assets/sprites/characters/enemys.png" id="1_f0wip"]
 [ext_resource type="Script" uid="uid://b2l7o4646ueg2" path="res://scripts/shotgunner.gd" id="1_ludgs"]
+[ext_resource type="AudioStream" uid="uid://18x2j8eof4bo" path="res://assets/sounds/enemy-shotgun.mp3" id="3_4fko2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ludgs"]
 atlas = ExtResource("1_f0wip")
@@ -176,3 +177,7 @@ frame_progress = 0.61640596
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.5, 0)
 shape = SubResource("RectangleShape2D_n0ls5")
+
+[node name="enemy-shotgun" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_4fko2")
+volume_db = -11.406

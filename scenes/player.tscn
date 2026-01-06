@@ -1,7 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://ce4rd5poi0hl3"]
+[gd_scene load_steps=20 format=3 uid="uid://domotgivjy206"]
 
 [ext_resource type="Script" uid="uid://cpo4xqaqhlj61" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://cf3c3wq8xf87u" path="res://assets/sprites/characters/angel.png" id="2_g2els"]
+[ext_resource type="AudioStream" uid="uid://d2sjlmvqnhwwt" path="res://assets/sounds/dash.mp3" id="3_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://slldnadv0lr0" path="res://assets/sounds/player_dies.mp3" id="3_qlg0r"]
+[ext_resource type="AudioStream" uid="uid://dqlpkclwn61jk" path="res://assets/sounds/player-shot.mp3" id="4_dqkch"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
 atlas = ExtResource("2_g2els")
@@ -123,3 +126,12 @@ shape = SubResource("RectangleShape2D_g2els")
 
 [node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
 scale = Vector2(0.5, 0.5)
+stream = ExtResource("3_qlg0r")
+volume_db = 10.735
+
+[node name="dash" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_qhqgy")
+
+[node name="player_shot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_dqkch")
+volume_db = -12.748

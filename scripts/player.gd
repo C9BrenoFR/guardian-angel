@@ -14,6 +14,8 @@ const FOCUSED_CROSSHAIR = preload("res://assets/sprites/ui/focused_aim.png")
 @export var dash_speed : float = 600.0
 @export var dash_duration : float = 0.15
 @onready var death_sound: AudioStreamPlayer2D = $DeathSound
+@onready var dash = $dash as AudioStreamPlayer
+@onready var player_shot = $player_shot as AudioStreamPlayer
 
 var is_dashing : bool = false
 var dash_time : float = 0.0
@@ -66,6 +68,7 @@ func _physics_process(delta):
 
 func start_dash(dir: Vector2) -> void:
 	is_dashing = true
+	dash.play()
 	dash_time = dash_duration
 	dash_direction = dir
 	last_dash = 0
@@ -89,6 +92,7 @@ func animate(dv: Vector2) -> void:
 		$AnimatedSprite2D.stop()
 
 func shoot():
+	player_shot.play()
 	var bullet = OBJ_BULLET.instantiate()
 	bullet.global_position = global_position
 	

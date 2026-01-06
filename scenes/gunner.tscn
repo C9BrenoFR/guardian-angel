@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://0rrcm2x2vio1"]
+[gd_scene load_steps=24 format=3 uid="uid://0rrcm2x2vio1"]
 
 [ext_resource type="Script" uid="uid://bruexh04ysxq7" path="res://scripts/gunner.gd" id="1_58u8n"]
 [ext_resource type="Texture2D" uid="uid://bgjymqf5mv5aa" path="res://assets/sprites/characters/enemys.png" id="2_ougl3"]
+[ext_resource type="AudioStream" uid="uid://tmdv3acxwx6d" path="res://assets/sounds/enemy-machinegun.mp3" id="3_ougl3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_58u8n"]
 atlas = ExtResource("2_ougl3")
@@ -175,3 +176,7 @@ animation = &"walk_left-right"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.5, 0)
 shape = SubResource("RectangleShape2D_n0ls5")
+
+[node name="enemy-machinegun" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ougl3")
+volume_db = -11.311

@@ -36,6 +36,11 @@ func get_health_percentage() -> float:
 	return float(current_health) / float(max_health)
 
 func end_game():
+	for child in get_tree().root.get_children():
+		if child is AudioStreamPlayer or child is AudioStreamPlayer2D:
+			child.stop()
+			child.queue_free()
+			
 	await handle_player_died(player.get_node("DeathSound"))
 	change_to_game_over()
 

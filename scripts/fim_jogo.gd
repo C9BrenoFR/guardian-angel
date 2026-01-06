@@ -2,6 +2,8 @@ extends Node2D
 
 @export var main_scene_path: String = "res://scenes/main_page.tscn"
 @export var credits_scene_path: String = "res://scenes/credits.tscn"
+@onready var lose_screen = $"lose-screen" as AudioStreamPlayer
+@onready var win_screen = $"win-screen" as AudioStreamPlayer
 
 var is_victory = false
 
@@ -15,9 +17,13 @@ func _ready() -> void:
 func _update_result_visibility() -> void:
 	if has_node("Victory"):
 		$Victory.visible = is_victory
+		if is_victory:
+			win_screen.play()
+			
 	if has_node("Defeat"):
 		$Defeat.visible = not is_victory
-
+		if not is_victory:
+			lose_screen.play()
 
 func _on_voltar_pressed() -> void:
 	PlayerStats.reset_health()

@@ -6,6 +6,7 @@ const BULLET_SCENE = preload("res://scenes/bullet.tscn")
 @export var attack_range := 200.0
 @export var bullet_speed := 300.0
 @export var shoot_cooldown := 0.1
+@onready var machine_gun = $"enemy-machinegun" as AudioStreamPlayer
 
 var player: CharacterBody2D
 var shoot_timer := 0.0
@@ -37,6 +38,7 @@ func chase_player():
 	velocity = dir * move_speed
 
 func shoot():
+	machine_gun.play()
 	var bullet = BULLET_SCENE.instantiate()
 	bullet.global_position = global_position
 
