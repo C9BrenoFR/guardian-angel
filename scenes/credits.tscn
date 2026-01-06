@@ -32,7 +32,11 @@ offset_right = 1024.0
 offset_bottom = 354.0
 theme_override_fonts/font = ExtResource("3_8gwij")
 theme_override_font_sizes/font_size = 20
-text = "[Descrição do Jogo]
+text = "Protagonista: um anjo controlável.
+Mecânicas: ataque corpo-a-corpo ou projetil e movimento de dash para esquiva.
+HUD: barra de vida que mostra a saúde do personagem.
+Objetivo: sobreviver e derrotar hordas de inimigos — vitória quando todos os inimigos 
+forem eliminados; derrota se a vida chegar a 0
 
 Grupo
 - Breno Furtado Rosado — 202376003
