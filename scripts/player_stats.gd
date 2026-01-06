@@ -1,6 +1,5 @@
 extends Node
 
-# Sinais para notificar mudanças
 signal health_changed(new_health, max_health)
 signal player_died
 
@@ -8,7 +7,6 @@ var max_health: int = 100
 var current_health: int = 100
 
 func _ready():
-	# Inicializa a vida do jogador
 	current_health = max_health
 
 func take_damage(amount: int) -> void:
