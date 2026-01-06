@@ -13,6 +13,7 @@ const FOCUSED_CROSSHAIR = preload("res://assets/sprites/ui/focused_aim.png")
 @export var focus_speed : float = 75.0
 @export var dash_speed : float = 600.0
 @export var dash_duration : float = 0.15
+@onready var death_sound: AudioStreamPlayer2D = $DeathSound
 
 var is_dashing : bool = false
 var dash_time : float = 0.0

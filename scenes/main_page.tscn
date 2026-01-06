@@ -58,13 +58,29 @@ grow_vertical = 2
 theme = ExtResource("3_v01hg")
 text = "Creditos"
 
-[node name="Exit" type="Button" parent="."]
+[node name="how_to_play" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.63
 anchor_right = 0.5
 anchor_bottom = 0.63
+offset_left = -54.0
+offset_top = -15.0
+offset_right = 53.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_v01hg")
+text = "Como Jogar"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.7
+anchor_right = 0.5
+anchor_bottom = 0.7
 offset_left = -54.0
 offset_top = -15.0
 offset_right = 53.0
@@ -90,4 +106,5 @@ text = "Guardian Angel"
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Credit" to="." method="_on_credit_pressed"]
+[connection signal="pressed" from="how_to_play" to="." method="_on_how_to_play_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

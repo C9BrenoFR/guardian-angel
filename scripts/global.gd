@@ -1,9 +1,8 @@
 extends Node
 
+const TOTAL_ENEMIES = 74
 
-# Quantos inimigos ainda faltam matar
-# Quando chegar a 0 = Vitória
-var enemies_remaining: int = 0
+var enemies_killed: int = 0
 
 func reset_enemies():
-	enemies_remaining = 0
+	enemies_killed = 0

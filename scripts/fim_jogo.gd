@@ -3,23 +3,16 @@ extends Node2D
 @export var main_scene_path: String = "res://scenes/main_page.tscn"
 @export var credits_scene_path: String = "res://scenes/credits.tscn"
 
+var is_victory = false
+
 func _ready() -> void:
+	if Global.enemies_killed == Global.TOTAL_ENEMIES and PlayerStats.current_health > 0 :
+		is_victory = true
 	
-	var is_victory: bool = false
-	
-	if PlayerStats.current_health <= 0:
-		is_victory = false 
-	elif Global.enemies_remaining <= 0:
-		is_victory = true 
-	
-	_update_result_visibility(is_victory)
+	_update_result_visibility()
 
 
-func _process(delta: float) -> void:
-	pass
-
-
-func _update_result_visibility(is_victory: bool) -> void:
+func _update_result_visibility() -> void:
 	if has_node("Victory"):
 		$Victory.visible = is_victory
 	if has_node("Defeat"):

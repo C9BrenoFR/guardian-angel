@@ -1300,3 +1300,10 @@ offset_left = -1.0
 offset_top = -1.0
 offset_right = -1.0
 offset_bottom = -1.0
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 2.666687
+offset_top = -0.6666667
+offset_right = 767.3334
+offset_bottom = 22.333334
+horizontal_alignment = 2

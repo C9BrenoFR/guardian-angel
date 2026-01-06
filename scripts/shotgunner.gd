@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends Enemy
 
 const BULLET_SCENE = preload("res://scenes/bullet.tscn")
 

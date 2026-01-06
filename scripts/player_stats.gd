@@ -1,7 +1,8 @@
 extends Node
 
 signal health_changed(new_health, max_health)
-signal player_died
+
+var player: CharacterBody2D
 
 var max_health: int = 100
 var current_health: int = 100
@@ -14,7 +15,7 @@ func take_damage(amount: int) -> void:
 	health_changed.emit(current_health, max_health)
 	
 	if current_health <= 0:
-		player_died.emit()
+		end_game()
 
 func heal(amount: int) -> void:
 	current_health = min(max_health, current_health + amount)
@@ -33,3 +34,23 @@ func get_health_percentage() -> float:
 	if max_health <= 0:
 		return 0.0
 	return float(current_health) / float(max_health)
+
+func end_game():
+	await handle_player_died(player.get_node("DeathSound"))
+	change_to_game_over()
+
+func handle_player_died(death_sound: AudioStreamPlayer2D) -> void:
+	get_tree().paused = true
+	
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	death_sound.process_mode = Node.PROCESS_MODE_ALWAYS
+	
+	if death_sound.stream:
+		death_sound.play()
+		await death_sound.finished
+	else:
+		await get_tree().create_timer(1.5, true).timeout
+
+func change_to_game_over() -> void:
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://scenes/fim_Jogo.tscn")

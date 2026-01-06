@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuoo5l52wa4kv"]
+
+[ext_resource type="Script" uid="uid://2eegb33sepr0" path="res://scripts/credits.gd" id="1_kw7sy"]
+[ext_resource type="Texture2D" uid="uid://dmlo1m8du724m" path="res://assets/sprites/ui/orig.png" id="2_w1yuk"]
+[ext_resource type="FontFile" uid="uid://cy1d06jbu874j" path="res://assets/fonts/CinzelDecorative-Regular.otf" id="3_3aj6j"]
+[ext_resource type="Theme" uid="uid://c3gavqr2njb6c" path="res://assets/resourses/button_theme.tres" id="4_7pudc"]
+
+[node name="how_to_play" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_kw7sy")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 1154.0
+offset_bottom = 652.0
+texture = ExtResource("2_w1yuk")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 31.0
+offset_right = 1115.0
+offset_bottom = 563.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 64.0
+offset_right = 1167.0
+offset_bottom = 520.0
+theme_override_fonts/font = ExtResource("3_3aj6j")
+theme_override_font_sizes/font_size = 20
+text = "Sua Missão: Intervenção Divina
+
+O destino do seu protegido está selado pela ganância. Para evitar a sua demissão e salvar 
+uma vida, você deve purificar o setor corporativo enfrentando 5 hordas de oposição (10, 
+12, 14, 18 e 20 inimigos).
+
+Ameaças Corporativas:
+
+- Gunner: Equipado com metralhadoras de tiro rápido. Não baixe a guarda.
+- Shotgunner: Dispara arcos de projéteis pesados. Mantenha distância.
+
+Comandos do Anjo:
+
+- W, A, S, D: Voe pelo campo de batalha.
+- SHIFT (Modo Foco): Estabilize suas asas para uma mira precisa (reduz velocidade de 
+movimento).
+- ESPAÇO (Investida): Um impulso celestial rápido na direção do olhar.
+- V (Projétil de Energia): Canalize seu poder para destruir os alvos da injustiça."
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.63
+anchor_right = 0.5
+anchor_bottom = 0.63
+offset_left = 504.0
+offset_top = 582.0
+offset_right = 638.0
+offset_bottom = 623.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_7pudc")
+text = "Voltar"
+
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
