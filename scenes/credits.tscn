@@ -22,25 +22,25 @@ layout_mode = 0
 offset_left = 29.0
 offset_top = 31.0
 offset_right = 1115.0
-offset_bottom = 555.0
+offset_bottom = 563.0
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 95.0
-offset_top = 99.0
-offset_right = 1051.0
-offset_bottom = 640.0
+offset_left = 68.0
+offset_top = 64.0
+offset_right = 1024.0
+offset_bottom = 354.0
 theme_override_fonts/font = ExtResource("3_8gwij")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 20
 text = "[Descrição do Jogo]
-
-Fontes e recursos
-- Health Bar: https://skristi.itch.io/heart-and-health-bars
 
 Grupo
 - Breno Furtado Rosado — 202376003
 - João Vitor Nicácio — 202365565C
-- Matheus Ribeiro Menezes — 202375023"
+- Matheus Ribeiro Menezes — 202375023
+
+
+"
 
 [node name="Exit" type="Button" parent="."]
 layout_mode = 1
@@ -49,13 +49,28 @@ anchor_left = 0.5
 anchor_top = 0.63
 anchor_right = 0.5
 anchor_bottom = 0.63
-offset_left = 501.0
-offset_top = 570.0
-offset_right = 635.0
-offset_bottom = 611.0
+offset_left = 504.0
+offset_top = 582.0
+offset_right = 638.0
+offset_bottom = 623.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_mah5v")
 text = "Voltar"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 380.0
+offset_right = 1081.0
+offset_bottom = 531.0
+theme_override_fonts/font = ExtResource("3_8gwij")
+theme_override_font_sizes/font_size = 16
+text = "Fontes e recursos
+- Health Bar: https://skristi.itch.io/heart-and-health-bars
+-Charachters: https://www.spriters-resource.com/pc_computer/rpgmakerxp/asset/100488/
+-Bullets: https://www.spriters-resource.com/pc_computer/touhouchireidensubterraneananimism/asset/120461/
+-BackGrounds: https://free-game-assets.itch.io/free-sky-with-clouds-background-pixel-art-set
+Cutscene: https://www.instagram.com/p/DSAN5o2DZxU/"
 
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
